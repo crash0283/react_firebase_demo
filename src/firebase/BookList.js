@@ -72,6 +72,12 @@ class BookList extends React.Component {
                 errors.push("Author can't be blank!");
             }
 
+            this.state.bookList.forEach((item) => {
+                if(item.title === title) {
+                    errors.push("Title already added! Please add a new title.");
+                }
+            })
+           
             return errors;
         }
         render() {
