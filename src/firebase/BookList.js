@@ -83,9 +83,9 @@ class BookList extends React.Component {
         render() {
             return (
                 <div>
+                    { this.state.errors.map((item,i) => <h3 key={i}>{item}</h3>) }
+                    { this.state.success !== '' && <h3 id='success'>{this.state.success}</h3> }
                     <form onSubmit={this.handleSubmit}>
-                        { this.state.errors.map((item,i) => <h3 key={i}>{item}</h3>) }
-                        { this.state.success !== '' && <h3 id='success'>{this.state.success}</h3> }
                         <div className="form-field">
                             <label>Title: </label>
                             <input type="text" name="title" value={this.state.title} onChange={e => this.setState({title: e.target.value})}/>
