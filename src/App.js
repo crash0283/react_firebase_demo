@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BookList from './firebase/firebase';
+import BookList from './firebase/BookList';
 import logo from './logo.svg';
 import './App.css';
 
