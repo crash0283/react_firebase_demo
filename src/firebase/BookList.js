@@ -48,11 +48,11 @@ class BookList extends React.Component {
         handleSubmit(e) {
             e.preventDefault();
 
-            const title = e.target.title.value;
-            const author = e.target.author.value;
+            const title = e.target.title.value.toLowerCase();
+            const author = e.target.author.value.toLowerCase();
 
             const errors = this.handleErrors(title,author);
-
+            console.log(this.state.bookList);
             if(errors.length > 0) {
                 this.setState({errors, success: ''});
                 return;
@@ -73,7 +73,7 @@ class BookList extends React.Component {
             }
 
             this.state.bookList.forEach((item) => {
-                if(item.title === title.toLowerCase()) {
+                if(item.title === title) {
                     errors.push("Title already added! Please add a new title.");
                 }
             })
