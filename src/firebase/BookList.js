@@ -73,7 +73,7 @@ class BookList extends React.Component {
             }
 
             this.state.bookList.forEach((item) => {
-                if(item.title === title) {
+                if(item.title === title.toLowerCase()) {
                     errors.push("Title already added! Please add a new title.");
                 }
             })
