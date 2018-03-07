@@ -9,7 +9,7 @@ class App extends Component {
       <div className="App">
         <div className="header">
           <img src={logo} className='App-logo' alt='' />
-          <h1>Firebase Practice</h1>
+          <h1>More Books...</h1>
         </div>
         <BookList />
       </div>
