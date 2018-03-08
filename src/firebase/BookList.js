@@ -52,7 +52,7 @@ class BookList extends React.Component {
             const author = e.target.author.value.toLowerCase();
 
             const errors = this.handleErrors(title,author);
-            console.log(this.state.bookList);
+
             if(errors.length > 0) {
                 this.setState({errors, success: ''});
                 return;
@@ -94,13 +94,13 @@ class BookList extends React.Component {
                             <label>Author: </label>
                             <input type="text" name="author" value={this.state.author} onChange={e => this.setState({author: e.target.value})}/>
                         </div>
-                        <input type="submit" value="Add Book"/>
+                        <input type="submit" value="&#x2714;"/>
                     </form>
                     <ul>
                         {this.state.bookList.map((item) => 
                             <li key={item.id}>
-                            <span id="title" className="result">Title: {item.title.toUpperCase()}</span>
-                            <span id="author" className="result">Author: {item.author.toUpperCase()}</span>
+                            <span id="title" className="result"><span className="liHeader">Title:</span> {item.title.toUpperCase()}</span>
+                            <span id="author" className="result"><span className="liHeader">Author:</span> {item.author.toUpperCase()}</span>
                             <button onClick={() => this.handleClick(item.id)}>X</button>
                             </li>
                         )}
