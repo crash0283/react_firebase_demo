@@ -47,6 +47,7 @@ h1 {
   padding-left: 20px;
   font-weight: 700;
   font-family: 'Goudy Bookletter 1911', serif;
+  font-size: 1.5rem;
   width: 70%;
   margin: 0 auto;
 }
@@ -162,6 +163,10 @@ h3 {
   
   input[type="text"] {
     display: inline;
+  }
+
+  h1 {
+    font-size: 2.4rem;
   }
 
   label {
